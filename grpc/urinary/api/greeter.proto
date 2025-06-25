@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package urinary;
+
+option go_package="github.com/hossainemruz/go-samples/grpc/urinary/api";
+
+service GreeterService{
+    rpc Greet (GreetRequest) returns (GreetResponse);
+}
+
+message GreetRequest{
+    string name = 1;
+}
+
+message GreetResponse{
+    string message = 1;
+}
